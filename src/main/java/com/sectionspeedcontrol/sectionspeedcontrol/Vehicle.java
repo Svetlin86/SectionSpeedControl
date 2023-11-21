@@ -26,8 +26,9 @@ public class Vehicle {
     }
 
     private void calculateAverageSpeed() {
-        double distance = 10.0; // 10 km road section
-        double elapsedTime = entryTime.until(exitTime, ChronoUnit.MILLIS); // Convert milliseconds to hours
-        averageSpeed = distance / elapsedTime;
+        double distance = 10.0;
+        double elapsedTime = entryTime.until(exitTime, ChronoUnit.SECONDS);
+        //TODO fix speed
+        averageSpeed = (distance / (360/elapsedTime))*10;
     }
 }
